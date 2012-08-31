@@ -1,0 +1,8 @@
+oracle SQL Developer
+
+  1.  rpm -Uhv /home/student/sql.developer_3.1.07.42-1.noarch.rpm
+  2.  sudo apt-get install rpm
+  3.  sudo apt_get install alien
+  4.  sudo alien /home/student/sql.developer_3.1.07.42-1.noarch.rpm
+  5.  sudo dpkg -i /home/student/sql.developer_3.1.07.42-2_all.deb
+  6.  sudo sqldeveloper 
