@@ -1,0 +1,30 @@
+MySql
+
+  1.  groupadd mysql
+  2.  useradd -g mysql mysql
+  3.  tar -zxvf mysql-5.0.22.tar.gz
+  4.  cd mysql-5.0.22
+  5.  ./configure --prefix=/usr/local/mysql --with-charset=gbk
+  6.  make
+  7.  make install
+  8.  cp support-files/my-medium.cnf /etc/my.cnf
+  9.  cp support-files/mysql.server /etc/rc.d/init.d/mysqld
+ 10.  chmod 700 /etc/rc.d/init.d/mysqld
+ 11.  chkconfig --add mysqld
+ 12.  chkconfig --level 345 mysqld on
+ 13.  cd /usr/local/mysql
+ 14.  /usr/local/mysql/bin/mysql_install_db --user=mysql
+ 15.  chown -R root .
+ 16.  chown -R mysql var
+ 17.  chgrp -R mysql .
+ 18.  /usr/local/mysql/bin/mysqld_safe --user=mysql &
+ 19.  /etc/rc.d/init.d/mysqld start
+ 20.  ln -s /usr/local/mysql/bin/mysql /sbin/mysql
+ 21.  ln -s /usr/local/mysql/bin/mysqladmin /sbin/mysqladmin
+ 22.  PATH=$PATH:/usr/local/mysql/bin
+ 23.  export PATH
+ 24.  echo "/usr/local/mysql/lib/mysql" >> /etc/ld.so.conf
+ 25.  ldconfig
+ 26.  reboot
+ 27.  /usr/bin/mysqladmin -u root password 123456
+ 28.  mysql -u root -p123456 
