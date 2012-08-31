@@ -1,0 +1,5 @@
+Selenium
+
+  1. cd /home/student/seleium-remote-control-1.03/selenium-serrer-1.03
+  2. java -jar selenium - server.jar
+  3. sudo apt-get install default-jre 
