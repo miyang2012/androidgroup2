@@ -1,0 +1,13 @@
+
+java JDK
+
+  1.  cd..
+  2.  cd user/lib
+  3.  mkdir jum
+  4.  cd jum
+  5.  mkdir java
+  6.  cd java
+  7.  copy jdk1.6.bin into java
+  8.  chmod u+x jdk1.6.bin
+  9.  sudo ./jdk1.6.bin
+ 10.  gedit /etc/profile # set java enviroment JAVA_HOME=/user/lib/jum/java/jdk1.6.0_24 export JRE.HOMEJ=/usr/lib/jum/java/jdk1.6.0_24/jre export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH 
